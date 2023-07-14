@@ -1,7 +1,6 @@
 # discord-bot
 requires:
-- channel_id.txt
-- token.txt
+- `TOKEN` and `CHANNEL_ID` env variables (set up for pipeline atm)
 
 to run:
 - `python main.py`
