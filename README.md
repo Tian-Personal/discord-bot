@@ -1,4 +1,7 @@
 # discord-bot
-run `main.py`
+requires:
+- channel_id.txt
+- token.txt
 
-not sending my tokens soz
+to run:
+- `python main.py`
