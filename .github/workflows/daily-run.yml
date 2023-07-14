@@ -25,3 +25,8 @@ jobs:
       env:
         TOKEN: ${{ secrets.DISCORD_TOKEN }}
         CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+      working-directory: ${{ github.workspace }}
+
+    - name: Print root directory contents
+      run: ls -al
+      working-directory: ${{ github.workspace }}
