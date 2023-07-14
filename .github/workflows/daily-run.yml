@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Print root directory contents
+      run: ls -al
+      working-directory: ${{ github.workspace }}
+      
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
@@ -25,8 +29,4 @@ jobs:
       env:
         TOKEN: ${{ secrets.DISCORD_TOKEN }}
         CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-      working-directory: ${{ github.workspace }}
-
-    - name: Print root directory contents
-      run: ls -al
       working-directory: ${{ github.workspace }}
