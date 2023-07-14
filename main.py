@@ -32,6 +32,8 @@ client = discord.Client(intents=intents)
 async def on_ready():
     print('Bot is ready.')
     await send_daily_question()
+    await client.close()
+    raise SystemExit
 
 
 async def send_daily_question():
