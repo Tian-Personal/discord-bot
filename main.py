@@ -2,8 +2,8 @@ import discord
 from datetime import datetime
 import os
 
-TOKEN = os.getenv('TOKEN')
-CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
+TOKEN = 'MTEyOTM4MDcyNjkwNzg3OTQzNA.G7DaD9.A25UgkhGvslsAW1uN3wt8QUSVP5lI8w1Gu-gFg'
+CHANNEL_ID = 1129383593291038782
 
 with open('questions.txt', 'r') as file:
     questions = file.readlines()
