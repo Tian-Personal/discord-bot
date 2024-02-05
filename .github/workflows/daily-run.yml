@@ -1,8 +1,8 @@
 name: Daily Run
 
-on:
-  schedule:
-    - cron: "0 20 * * *"
+#on:
+#  schedule:
+#    - cron: "0 20 * * *"
 
 jobs:
   run_script:
