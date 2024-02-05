@@ -2,8 +2,8 @@ import discord
 from datetime import datetime
 import os
 
-TOKEN = 'MTEyOTM4MDcyNjkwNzg3OTQzNA.G7DaD9.A25UgkhGvslsAW1uN3wt8QUSVP5lI8w1Gu-gFg'
-CHANNEL_ID = 1129383593291038782
+TOKEN = os.getenv('TOKEN')
+CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 
 with open('questions.txt', 'r') as file:
     questions = file.readlines()
@@ -32,13 +32,12 @@ client = discord.Client(intents=intents)
 async def on_ready():
     print('Bot is ready.')
     await send_daily_question()
-    await client.close()
-    raise SystemExit
 
 
 async def send_daily_question():
     await client.wait_until_ready()
     channel = client.get_channel(CHANNEL_ID)
     await channel.send(content=get_question_formatted()) # force run once
+    await client.close()
 
 client.run(TOKEN)
