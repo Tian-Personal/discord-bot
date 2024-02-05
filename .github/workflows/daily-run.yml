@@ -4,6 +4,12 @@ name: Daily Run
 #  schedule:
 #    - cron: "0 20 * * *"
 
+# force run
+on:
+  push:
+    branches:
+      - '*'
+
 jobs:
   run_script:
     runs-on: ubuntu-latest
